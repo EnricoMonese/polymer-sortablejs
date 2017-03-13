@@ -1,0 +1,18 @@
+{
+	"extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"globals": {
+		"Sortable": true,
+		"Polymer": true
+	},
+	"rules": {
+		"semi": 1,
+		"quotes": [1, "double"]
+	}
+}
