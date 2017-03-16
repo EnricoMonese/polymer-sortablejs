@@ -122,7 +122,7 @@
 							*/
 						}
 
-						this.fire("sortable-update", e);
+						this.dispatchEvent(new CustomEvent("sortable-update", e));
 					},
 
 					onAdd: (e) => {
@@ -132,7 +132,7 @@
 							let item = from.items[e.oldIndex];
 							template.splice("items", e.newIndex, 0, item);
 						}
-						this.fire("sortable-add", e);
+						this.dispatchEvent(new CustomEvent("sortable-add", e));
 					},
 
 					onRemove: (e) => {
@@ -140,35 +140,35 @@
 							template.splice("items", e.oldIndex, 1);
 						}
 
-						this.fire("sortable-remove", e);
+						this.dispatchEvent(new CustomEvent("sortable-remove", e));
 					},
 
 					onChoose: (e) => {
-						this.fire("sortable-choose", e);
+						this.dispatchEvent(new CustomEvent("sortable-choose", e));
 					},
 
 					onStart: (e) => {
-						this.fire("sortable-start", e);
+						this.dispatchEvent(new CustomEvent("sortable-start", e));
 					},
 
 					onEnd: (e) => {
-						this.fire("sortable-end", e);
+						this.dispatchEvent(new CustomEvent("sortable-end", e));
 					},
 
 					onSort: (e) => {
-						this.fire("sortable-sort", e);
+						this.dispatchEvent(new CustomEvent("sortable-sort", e));
 					},
 
 					onFilter: (e) => {
-						this.fire("sortable-filter", e);
+						this.dispatchEvent(new CustomEvent("sortable-filter", e));
 					},
 
 					onMove: (e) => {
-						this.fire("sortable-move", e);
+						this.dispatchEvent(new CustomEvent("sortable-move", e));
 					},
 
 					onClone: (e) => {
-						this.fire("sortable-clone", e);
+						this.dispatchEvent(new CustomEvent("sortable-clone", e));
 					}
 				};
 
